@@ -1,0 +1,31 @@
+h1 {
+    font-size: 40px;
+    letter-spacing: .05cm;
+    padding:7 20 7 20px;
+    margin:10 0 0 50px;
+}
+
+form {
+    width:470px;
+    font-size: 20px;
+    letter-spacing: .05cm;
+    margin:50 0 0 0px;
+}
+
+label{
+    float:left;
+}
+
+button, .alert, .alert-primary{
+    font-size: 20px;
+    letter-spacing: .02cm;
+    padding:7 20 7 20px;
+    margin:10 0 0 50px;
+}
+
+textarea {
+    resize: none;
+    font-size: 15px;
+    letter-spacing: .02cm;
+    padding:7 20 7 20px;
+}

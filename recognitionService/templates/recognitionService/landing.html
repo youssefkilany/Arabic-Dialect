@@ -1,0 +1,11 @@
+{% extends 'recognitionService/base.html' %}
+{% load static %}
+
+{% block page_content %}
+<h1>Dialect Identification App</h1>
+<div>
+    <a href="{% url 'model' 'ml' %}">Go ML!</a>
+    <br>
+    <a href="{% url 'model' 'dl' %}">Go DL!</a>
+</div>
+{% endblock %}

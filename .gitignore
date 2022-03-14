@@ -1,0 +1,13 @@
+# ignore python virtual environment
+venv/
+
+# ignore these repositories, required for development
+arabert/
+
+# testing a tiny model
+bert-tiny-mnli/
+
+# ignore big files, these files can be obtained manually or by running respective scripts
+*.pkl
+*.csv
+*.json

@@ -1,0 +1,32 @@
+{% extends 'recognitionService/base.html' %}
+
+{% block page_content %}
+
+<h1>Dialect Identification App</h1>
+<div>
+    <form id='predictionPlaceholder' action="{% url 'model' model %}" method='POST'>
+        {% csrf_token %}
+        {% comment %}
+        Initially, I was using a hidden input in the form to indicate type of model
+        instead of using a parameter to the url router.
+        <input type="hidden" name="model" value="{{model}}" /> 
+        {% endcomment %}
+        {{ form }}
+        <button onClick="this.disabled=true;this.innerText='Sending…';this.form.submit();"
+                type='submit'>Identify</button>
+    </form>
+
+    {% if valid_POST %}
+    {% if predicted_dialect is not None %}
+    <div class="alert alert-primary" role="alert">
+        Predicted label: <b>{{ predicted_dialect }}</b>
+    </div>
+    {% else %}
+    <div class="alert alert-danger" role="alert">
+        Prediction error. No label predicted.
+    </div>
+    {% endif %}
+    {% endif %}
+</div>
+    {% comment %} https://stackoverflow.com/a/3366892/12896502 {% endcomment %}
+{% endblock %}
